@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+  
+    <style type="text/css">
+        body{
+            background-image: url(bus3.jpg);
+        }
+    </style>
+    <h:head>
+        
+        <title>BOOKING</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    </h:head>
+    <h:body>
+        <div>
+            <h:form>
+                <center><h1>BOOKING</h1></center>
+                
+                
+                <h:outputLabel>Id: </h:outputLabel>
+                <h:inputText id="id" value = "#{BookingObj.id}" validatorMessage="Id is required..">
+                    <f:validateRequired/></h:inputText>
+            
+            <br>
+            </br>
+            <br>
+            </br>
+             <h:outputLabel>Name: </h:outputLabel>
+             <h:inputText id="name" value = "#{BookingObj.name}" validatorMessage="Name is required..">
+                 <f:validateRequired/></h:inputText>
+             
+            <br>
+            </br>
+            <br>
+            </br>
+             <h:outputLabel>Phone Number: </h:outputLabel>
+             <h:inputText id="phone" value = "#{BookingObj.phone}" validatorMessage="Phone number is required..">
+                 <f:validateRequired/></h:inputText>
+            
+            <br>
+            </br>
+                <br>
+            </br>
+             <h:outputLabel>Destination: </h:outputLabel>
+             <h:inputText id="destination" value = "#{BookingObj.destination}" validatorMessage="Destination is required..">
+                 <f:validateRequired/></h:inputText>
+             
+            <br>
+            </br>
+                <br>
+            </br>
+             <h:outputLabel>Time: </h:outputLabel>
+             <h:inputText id="time" value = "#{BookingObj.time}" validatorMessage="Time is required..">
+                 <f:validateRequired/></h:inputText>
+              
+            <br>
+            </br>
+                <br>
+            </br>
+             <h:outputLabel>Date: </h:outputLabel>
+             <h:inputText id="date" value = "#{BookingObj.date}" validatorMessage="Date is required..">
+                 <f:validateRequired/></h:inputText>
+              <br>
+            </br>
+                <br>
+            </br>
+             <h:outputLabel>Seat: </h:outputLabel>
+             <h:inputText id="seat" value = "#{BookingObj.seat}" validatorMessage="Seat is required..">
+                 <f:validateRequired/></h:inputText>
+            <br>
+            </br>
+           
+            <center><h:button value="BACK"  outcome="main"></h:button></center>
+            <br></br>
+            
+            <center><h:commandButton value="SUBMIT" action="#{BookingObj.booking()}"  class="btn btn-success btnWidth" /></center>
+            
+            
+            
+           
+            </h:form>
+        </div>
+    </h:body>
+</html>
